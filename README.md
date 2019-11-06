@@ -23,6 +23,13 @@ asciidoctor guide.adoc
 
 # Generate pdf
 
+Using asciidoctor-pdf
 ```
 asciidoctor-pdf guide.adoc
+```
+
+Using asciidoctor and dblatex
+```
+asciidoctor -b docbook5 guide.adoc
+dblatex --pdf guide.xml
 ```
