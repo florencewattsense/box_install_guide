@@ -5,6 +5,8 @@
 :Date: 2019/11/04
 :toc:
 
+:ws-console: https://console.wattsense.com
+
 == De quoi avez-vous besoin avant de commencer ?
 
 === Matériel fourni
@@ -37,12 +39,12 @@
 
 === Accès informatique à la console Wattsense
 
-* Chaque client bénéficie d’un espace dédié sur la console utilisateur Wattsense à l’adresse https://console.wattsense.com.
+* Chaque client bénéficie d’un espace dédié sur la console utilisateur Wattsense à l’adresse {ws-console}.
 Cette interface lui permet de gérer son parc de Box.
 * Une Box doit avoir été activée au préalable pour pouvoir être complètement installée et configurée.
 * S’il n’a pas déjà activé la Box, demander à l’administrateur du compte client de créer un accès « installateur » sur la console utilisateur Wattsense et récupérer les données de connexion (adresse e-mail et mot de passe).
 * Une fois sur site, activer la Box sur la console :
-** Se connecter à la console sur l’adresse https://console.wattsense.com : saisir l’e-mail et le mot de passe fournis par l’administrateur et cliquer sur « Se connecter ».
+** Se connecter à la console : saisir l’e-mail et le mot de passe fournis par l’administrateur et cliquer sur « Se connecter ».
 ** Saisir l’identifiant alphanumérique de la Box dans le rectangle de recherche en haut.
 ** Cliquer sur « Activer ».
 ** Donner obligatoirement un nom à la Box dans le champ « Nom » (par exemple le nom du site où elle va être installée).
@@ -52,7 +54,7 @@ Cette interface lui permet de gérer son parc de Box.
 
 == Alimentation électrique de la Box
 
-S’assurer que la Box a été activée au préalable sur la console utilisateur.
+S’assurer que la Box a été activée au préalable sur la {ws-console}[console utilisateur].
 
 * Placer idéalement la Box dans une armoire ou un coffret électrique.
 * Fixer la Box :
@@ -135,7 +137,7 @@ Informations à récupérer en prévision de la configuration :
 == Pour connecter la Box directement aux équipements techniques en l’absence de GTB
 
 * Préparer la liste des équipements à connecter et de leur protocole de communication.
-* Réunir la documentation technique de chaque fabricant pour savoir où et comment s’y raccorder (wizard de configuration de la console utilisateur, site du fabricant, etc.).
+* Réunir la documentation technique de chaque fabricant pour savoir où et comment s’y raccorder (wizard de configuration de la {ws-console}[console utilisateur], site du fabricant, etc.).
 * Elaborer un schéma d’installation.
 
 === L’équipement communique en Modbus IP
@@ -175,7 +177,7 @@ Pour paramétrer chacun des équipements
 
 Organisation de l’architecture des Bus :
 
-* Réunir les informations nécessaires pour chaque équipement : vitesse du Bus, taille du caractère, bit de parité, bit de stop (depuis le wizard de configuration de la console utilisateur, la documentation technique du fabricant, ou directement dans les panneaux de contrôle de l’équipement).
+* Réunir les informations nécessaires pour chaque équipement : vitesse du Bus, taille du caractère, bit de parité, bit de stop (depuis le wizard de configuration de la {ws-console}[console utilisateur], la documentation technique du fabricant, ou directement dans les panneaux de contrôle de l’équipement).
 * L’objectif est de créer au maximum 2 réseaux regroupant chacun les équipements ayant une configuration de communication identique pour les affecter aux 2 ports RS 485 de la Box.
 * Si les caractéristiques des équipements impliquent de constituer plus de 2 réseaux homogènes, il est nécessaire de commander une autre Box. 
 
@@ -272,7 +274,7 @@ Installer la Box :
 
 Pour chaque capteur :
 
-* Ajouter le capteur sur la console utilisateur (disponible à l’adresse https://console.wattsense.com) en le nommant pour qu’il soit identifiable.
+* Ajouter le capteur sur la {ws-console}[console utilisateur] en le nommant pour qu’il soit identifiable.
 * Envoyer la configuration à la Box.
 * Activer le capteur ; pour ce faire, utiliser la documentation technique du fabricant. 
 * Vérifier sur la console utilisateur que le capteur est bien détecté.
