@@ -15,6 +15,8 @@
 * Antenne GSM standard
 * Antenne LoRa standard
 
+image::images/what_is_supplied.png[]
+
 === Matériel indispensable
 
 * Alimentation 220V vers 12V-24V DC, 2A 
@@ -59,13 +61,20 @@ S’assurer que la Box a été activée au préalable sur la {ws-console}[consol
 * Placer idéalement la Box dans une armoire ou un coffret électrique.
 * Fixer la Box :
 ** Clipper la Box sur un rail DIN.
+image:images/box_install_din_rail.png[]
 ** Ou Fixer 2 vis sur un mur et accrocher la Box en utilisant les encoches au dos du boîtier : vis de 4 mm de diamètre au maximum, avec tête de 7.5 mm de diamètre au maximum, espacement de 89.4 mm.
+image:images/box_install_wall_mount.png[]
 * Utiliser une alimentation électrique DC de 12V à 24V, 2A.
 * Visser le câble dans le connecteur d’alimentation de la Box.
+image:images/box_power_connector_wiring.png[]
 * Connecter le câble à l’alimentation électrique.
+image:images/box_power_full_wiring.png[]
 * Vérifier que la LED « Power » est allumée (lumière verte fixe).
+image:images/box_power_led_on.png[]
 * Attendre une dizaine de secondes : la LED « Heartbeat » clignote (lumière verte). 
+image:images/box_heartbeat_blink.png[]
 * Attendre que la LED GSM clignote ; si la LED ne clignote pas au bout de quelques minutes, voir chapitre Antenne GSM.
+image:images/box_gsm_led_blink.png[]
 * Vérifier que la Box apparaît sur la console : l'indicateur de présence de la box passe de rouge à vert.
 * Si la Box apparaît sur la console, elle est fonctionnelle ; vous pouvez passer à l’étape de connexion de la Box aux équipements et/ou au réseau du bâtiment.
 * Si la Box n’apparaît pas sur la console, voir chapitre Antenne GSM.
@@ -74,7 +83,8 @@ S’assurer que la Box a été activée au préalable sur la {ws-console}[consol
 
 La Box est fournie avec une antenne GSM standard.
 
-* Si la qualité du signal GSM est bonne : conserver l’antenne d’origine installée sur la Box. 
+* Si la qualité du signal GSM est bonne : conserver l’antenne d’origine installée sur la Box.
+image:images/box_gsm_antenna.png[]
 * Si la qualité du signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne. 
 * Si la qualité du signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal.
 
@@ -83,6 +93,7 @@ La Box est fournie avec une antenne GSM standard.
 * Déterminer le ou les type(s) de réseau associé(s) à la GTB (protocoles de communication entre le serveur GTB et les équipements techniques).
 * Obtenir au préalable si possible le schéma du ou des réseau(x) de communication de la GTB.
 * Identifier où et comment le serveur GTB est connecté au réseau du bâtiment.
+image:images/bms_diagram_withtext.png[]
 
 === En cas de réseau IP (hors LON)
 
@@ -90,8 +101,10 @@ Connexion :
 
 * Prévoir un câble ethernet.
 * Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+image:images/box_ip_eth_plug.png[]
 * Connecter la Box au switch (réseau IP) sur lequel est connecté le PC de supervision / le serveur GTB.
 * Vérifier que la LED ETH1 ou ETH2 s’allume. 
+image:images/box_ip_eth_led_on.png[]
 
 Paramétrage :
 
@@ -112,8 +125,11 @@ Connexion :
 
 * Prévoir un câble ethernet.
 * Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité du câble au serveur IP-852 du réseau LON.     
+image:images/lon_ip_gateway_network.png[]
 * Vérifier que la LED ETH1 ou ETH2 s’allume.
+image:images/box_ip_eth_led_on.png[]
 * Enregistrer l’adresse IP de la BOX sur le serveur IP-852 du réseau LON ; le mot de passe du serveur IP-852 est probablement requis.
 
 Informations à récupérer en prévision de la configuration :
@@ -126,8 +142,11 @@ Informations à récupérer en prévision de la configuration :
 Connexion :
 
 * Prévoir une passerelle USB Echelon U60 FT DIN. 
+image:images/lon_ft10_echelon_u60.png[]
 * Connecter cette passerelle au port USB 1 ou 2 de la Box. 
+image:images/lon_ft10_echelon_gateway.png[]
 * Connecter aussi cette passerelle au réseau LON FT10.
+image:images/lon_ft10_echelon_gateway_to_network.png[]
 
 Informations à récupérer en prévision de la configuration :
 
@@ -146,15 +165,19 @@ Pour connecter 1 seul équipement
 
 * Prévoir un câble ethernet.
 * Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité du câble à l’équipement.
 * Vérifier que la LED ETH1 ou ETH2 s’allume. 
+image:images/box_ip_eth_led_on.png[]
 
 Pour connecter 2 équipements
 
 * Prévoir 2 câbles ethernet.
 * Connecter les câbles aux ports ethernet de la Box « ETH1 » et « ETH2 ». 
+image:images/box_ip_dual_eth_plug.png[]
 * Connecter les autres extrémités des câbles aux 2 équipements.
 * Vérifier que les LED ETH1 et ETH2 s’allument. 
+image:images/box_ip_both_eth_led_on.png[]
 
 Pour connecter 3 équipements ou plus
 
@@ -163,8 +186,11 @@ Pour connecter 3 équipements ou plus
 * Prévoir un switch ethernet.
 * Brancher l’alimentation du switch.
 * Connecter un câble ethernet au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité de ce câble au switch ethernet.
+image:images/box_ip_eth_switch.png[]
 * Vérifier que la LED ETH1 ou ETH2 s’allume. 
+image:images/box_ip_eth_led_on.png[]
 * Connecter tous les équipements au switch via les câbles ethernet.
 
 Pour paramétrer chacun des équipements
@@ -199,8 +225,10 @@ Pour connecter 1 seul équipement
 
 * Prévoir un câble ethernet.
 * Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité du câble à l’équipement.
 * Vérifier que la LED ETH1 ou ETH2 s’allume. 
+image:images/box_ip_eth_led_on.png[]
 
 Pour connecter 2 équipements ou plus
 
@@ -209,9 +237,12 @@ Pour connecter 2 équipements ou plus
 * Prévoir un switch ethernet.
 * Brancher l’alimentation du switch.
 * Connecter un câble ethernet au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité de ce câble au switch ethernet.
 * Vérifier que la LED ETH1 ou ETH2 s’allume. 
+image:images/box_ip_eth_led_on.png[]
 * Connecter tous les équipements au switch via les câbles ethernet.
+image:images/box_ip_eth_switch.png[]
 
 Pour paramétrer chacun des équipements
 
@@ -224,8 +255,11 @@ Pour paramétrer chacun des équipements
 Pour connecter les équipements
 
 * Prévoir une passerelle USB Echelon U60 FT DIN.
+image:images/lon_ft10_echelon_u60.png[]
 * La connecter au port USB 1 ou 2 de la Box.
+image:images/lon_ft10_echelon_gateway.png[]
 * Câbler la passerelle aux différents équipements comme vous le souhaitez, en série, en étoile, etc.
+image:images/lon_ft10_echelon_gateway_to_network.png[]
 
 Pour paramétrer chacun des équipements
 
@@ -239,8 +273,11 @@ Pour connecter 1 ou plusieurs équipements
 
 * Prévoir un câble ethernet.
 * Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité du câble au serveur IP-852 du réseau LON.  
+image:images/lon_ip_gateway_network.png[]
 * Vérifier que la LED ETH1 ou ETH2 s’allume.
+image:images/box_ip_eth_led_on.png[]
 * Enregistrer l’adresse IP de la BOX sur le serveur IP-852 du réseau LON.
 
 Pour paramétrer chacun des équipements
@@ -254,6 +291,7 @@ Pour connecter 1 ou plusieurs équipements
 
 * Connecter le bus LPB sur le port X-Bus de la Box 
 * Chaque équipement doit relier son signal MB au signal - du X-Bus et son signal DB au +
+image:images/lpb_plug_details.png[]
 
 Pour paramétrer chacun des équipements
 
@@ -269,6 +307,7 @@ Installer la Box :
 
 * Installer la Box en un lieu central permettant d’assurer la réception de tous les capteurs.
 * Si la qualité du signal LoRa est bonne : conserver l’antenne d’origine installée sur la Box.
+image:images/box_lora_antenna.png[]
 * Si la qualité de signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne. 
 * Si la qualité de signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal. 
 
