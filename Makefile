@@ -1,14 +1,20 @@
-IN_FILES=$(shell find . -name "*.adoc")
+OUTDIR=output
 
-guide.html: $(IN_FILES)
-	asciidoctor guide.adoc
+LANGS=fr en
+OUTFILES=$(foreach l,$(LANGS),$(OUTDIR)/guide_$(l).ext)
 
-guide.xml: $(IN_FILES)
-	asciidoctor -b docbook5 guide.adoc
+all: html docbook pdf
+html: $(OUTFILES:.ext=.html)
+docbook: $(OUTFILES:.ext=.xml)
+pdf: $(OUTFILES:.ext=.pdf)
 
-guide.pdf: guide.xml
-	dblatex --pdf guide.xml
+$(OUTDIR)/guide_%.html: guide_%.adoc
+	asciidoctor $< -D $(OUTDIR)
 
-html: guide.html
-docbook: guide.xml
-pdf: guide.pdf
+$(OUTDIR)/guide_%.xml: guide_%.adoc
+	asciidoctor -b docbook5 $< -D $(OUTDIR)
+
+$(OUTDIR)/guide_%.pdf: $(OUTDIR)/guide_%.xml
+	dblatex --pdf $< -O $(OUTDIR)
+
+.PHONY: all
