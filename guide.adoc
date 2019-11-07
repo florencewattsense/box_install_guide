@@ -19,7 +19,7 @@ image::images/what_is_supplied.png[]
 
 === Matériel indispensable
 
-* Alimentation 220V vers 12V-24V DC, 2A 
+* Alimentation 220V vers 12V-24V DC, 2A
 * Câble entre l’alimentation et la Box : 2 fils (rouge, noir), 22 AWG, section minimum : 0.35 mm²
 * Tournevis plat
 * Pince coupante
@@ -28,15 +28,15 @@ image::images/what_is_supplied.png[]
 === Matériel optionnel selon le type de connexion
 
 * Câble de raccordement des bus : 2 fils, 24 AWG, section minimum : 0.22 mm² + tresse
-* Câble(s) ethernet 
-* Switch ethernet 
+* Câble(s) ethernet
+* Switch ethernet
 * Passerelle USB Echelon U60 FT DIN (pour LON FT10)
 * Antenne GSM Grand Gain
 * Antenne LoRa Grand Gain
 * Câble pour antenne GSM ou LoRa
 * Ruban adhésif double face haute performance
-* Documentation technique des équipements 
-* Documentation technique des capteurs IoT 
+* Documentation technique des équipements
+* Documentation technique des capteurs IoT
 * Schéma du ou des réseau(x) de communication de la GTB
 
 === Accès informatique à la console Wattsense
@@ -71,7 +71,7 @@ image:images/box_power_connector_wiring.png[]
 image:images/box_power_full_wiring.png[]
 * Vérifier que la LED « Power » est allumée (lumière verte fixe).
 image:images/box_power_led_on.png[]
-* Attendre une dizaine de secondes : la LED « Heartbeat » clignote (lumière verte). 
+* Attendre une dizaine de secondes : la LED « Heartbeat » clignote (lumière verte).
 image:images/box_heartbeat_blink.png[]
 * Attendre que la LED GSM clignote ; si la LED ne clignote pas au bout de quelques minutes, voir chapitre Antenne GSM.
 image:images/box_gsm_led_blink.png[]
@@ -85,7 +85,7 @@ La Box est fournie avec une antenne GSM standard.
 
 * Si la qualité du signal GSM est bonne : conserver l’antenne d’origine installée sur la Box.
 image:images/box_gsm_antenna.png[]
-* Si la qualité du signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne. 
+* Si la qualité du signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne.
 * Si la qualité du signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal.
 
 == Pour connecter la Box à une GTB
@@ -100,10 +100,10 @@ image:images/bms_diagram_withtext.png[]
 Connexion :
 
 * Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
 image:images/box_ip_eth_plug.png[]
 * Connecter la Box au switch (réseau IP) sur lequel est connecté le PC de supervision / le serveur GTB.
-* Vérifier que la LED ETH1 ou ETH2 s’allume. 
+* Vérifier que la LED ETH1 ou ETH2 s’allume.
 image:images/box_ip_eth_led_on.png[]
 
 Paramétrage :
@@ -115,7 +115,7 @@ Informations à récupérer en prévision de la configuration :
 
 * Pour chaque équipement qui communique en Modbus IP
 ** Effectuer depuis le logiciel GTB un extrait des propriétés disponibles : liste des types de données fournies par les différents équipements et auxquelles la GTB a accès.
-** En cas d’impossibilité d’extraire ces informations, récupérer l’adresse IP et le port TCP (et si besoin, pour certains équipements, l’adresse de l’esclave « slave ID »), la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).   
+** En cas d’impossibilité d’extraire ces informations, récupérer l’adresse IP et le port TCP (et si besoin, pour certains équipements, l’adresse de l’esclave « slave ID »), la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
 * En cas de réseau BACnet IP
 ** Noter le port BACnet du réseau (ces informations seront nécessaires pour la configuration de l’installation).
 
@@ -124,9 +124,9 @@ Informations à récupérer en prévision de la configuration :
 Connexion :
 
 * Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
 image:images/box_ip_eth_plug.png[]
-* Connecter l’autre extrémité du câble au serveur IP-852 du réseau LON.     
+* Connecter l’autre extrémité du câble au serveur IP-852 du réseau LON.
 image:images/lon_ip_gateway_network.png[]
 * Vérifier que la LED ETH1 ou ETH2 s’allume.
 image:images/box_ip_eth_led_on.png[]
@@ -141,9 +141,9 @@ Informations à récupérer en prévision de la configuration :
 
 Connexion :
 
-* Prévoir une passerelle USB Echelon U60 FT DIN. 
+* Prévoir une passerelle USB Echelon U60 FT DIN.
 image:images/lon_ft10_echelon_u60.png[]
-* Connecter cette passerelle au port USB 1 ou 2 de la Box. 
+* Connecter cette passerelle au port USB 1 ou 2 de la Box.
 image:images/lon_ft10_echelon_gateway.png[]
 * Connecter aussi cette passerelle au réseau LON FT10.
 image:images/lon_ft10_echelon_gateway_to_network.png[]
@@ -164,19 +164,19 @@ Informations à récupérer en prévision de la configuration :
 Pour connecter 1 seul équipement
 
 * Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
 image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité du câble à l’équipement.
-* Vérifier que la LED ETH1 ou ETH2 s’allume. 
+* Vérifier que la LED ETH1 ou ETH2 s’allume.
 image:images/box_ip_eth_led_on.png[]
 
 Pour connecter 2 équipements
 
 * Prévoir 2 câbles ethernet.
-* Connecter les câbles aux ports ethernet de la Box « ETH1 » et « ETH2 ». 
+* Connecter les câbles aux ports ethernet de la Box « ETH1 » et « ETH2 ».
 image:images/box_ip_dual_eth_plug.png[]
 * Connecter les autres extrémités des câbles aux 2 équipements.
-* Vérifier que les LED ETH1 et ETH2 s’allument. 
+* Vérifier que les LED ETH1 et ETH2 s’allument.
 image:images/box_ip_both_eth_led_on.png[]
 
 Pour connecter 3 équipements ou plus
@@ -185,11 +185,11 @@ Pour connecter 3 équipements ou plus
 * Prévoir autant de câbles ethernet que d’équipements à connecter.
 * Prévoir un switch ethernet.
 * Brancher l’alimentation du switch.
-* Connecter un câble ethernet au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+* Connecter un câble ethernet au port ethernet de la Box « ETH1 » ou « ETH2 ».
 image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité de ce câble au switch ethernet.
 image:images/box_ip_eth_switch.png[]
-* Vérifier que la LED ETH1 ou ETH2 s’allume. 
+* Vérifier que la LED ETH1 ou ETH2 s’allume.
 image:images/box_ip_eth_led_on.png[]
 * Connecter tous les équipements au switch via les câbles ethernet.
 
@@ -205,13 +205,13 @@ Organisation de l’architecture des Bus :
 
 * Réunir les informations nécessaires pour chaque équipement : vitesse du Bus, taille du caractère, bit de parité, bit de stop (depuis le wizard de configuration de la {ws-console}[console utilisateur], la documentation technique du fabricant, ou directement dans les panneaux de contrôle de l’équipement).
 * L’objectif est de créer au maximum 2 réseaux regroupant chacun les équipements ayant une configuration de communication identique pour les affecter aux 2 ports RS 485 de la Box.
-* Si les caractéristiques des équipements impliquent de constituer plus de 2 réseaux homogènes, il est nécessaire de commander une autre Box. 
+* Si les caractéristiques des équipements impliquent de constituer plus de 2 réseaux homogènes, il est nécessaire de commander une autre Box.
 
 Pour connecter les équipements :
 
 * Attention : Ne jamais regrouper sur le même bus des équipements ayant des paramètres de communication différents.
-* Câbler en série le réseau ou chacun des 2 réseaux. 
-* Connecter le réseau à un port RS485 de la Box. 
+* Câbler en série le réseau ou chacun des 2 réseaux.
+* Connecter le réseau à un port RS485 de la Box.
 
 Pour paramétrer chacun des équipements
 
@@ -224,10 +224,10 @@ Pour paramétrer chacun des équipements
 Pour connecter 1 seul équipement
 
 * Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
 image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité du câble à l’équipement.
-* Vérifier que la LED ETH1 ou ETH2 s’allume. 
+* Vérifier que la LED ETH1 ou ETH2 s’allume.
 image:images/box_ip_eth_led_on.png[]
 
 Pour connecter 2 équipements ou plus
@@ -236,10 +236,10 @@ Pour connecter 2 équipements ou plus
 * Prévoir autant de câbles ethernet que d’équipements à connecter.
 * Prévoir un switch ethernet.
 * Brancher l’alimentation du switch.
-* Connecter un câble ethernet au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+* Connecter un câble ethernet au port ethernet de la Box « ETH1 » ou « ETH2 ».
 image:images/box_ip_eth_plug.png[]
 * Connecter l’autre extrémité de ce câble au switch ethernet.
-* Vérifier que la LED ETH1 ou ETH2 s’allume. 
+* Vérifier que la LED ETH1 ou ETH2 s’allume.
 image:images/box_ip_eth_led_on.png[]
 * Connecter tous les équipements au switch via les câbles ethernet.
 image:images/box_ip_eth_switch.png[]
@@ -272,9 +272,9 @@ Pour paramétrer chacun des équipements
 Pour connecter 1 ou plusieurs équipements
 
 * Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ». 
+* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
 image:images/box_ip_eth_plug.png[]
-* Connecter l’autre extrémité du câble au serveur IP-852 du réseau LON.  
+* Connecter l’autre extrémité du câble au serveur IP-852 du réseau LON.
 image:images/lon_ip_gateway_network.png[]
 * Vérifier que la LED ETH1 ou ETH2 s’allume.
 image:images/box_ip_eth_led_on.png[]
@@ -289,14 +289,14 @@ Pour paramétrer chacun des équipements
 
 Pour connecter 1 ou plusieurs équipements
 
-* Connecter le bus LPB sur le port X-Bus de la Box 
+* Connecter le bus LPB sur le port X-Bus de la Box
 * Chaque équipement doit relier son signal MB au signal - du X-Bus et son signal DB au +
 image:images/lpb_plug_details.png[]
 
 Pour paramétrer chacun des équipements
 
 * Par précaution, vérifier que l’équipement n’alimente pas le bus LPB.
-* Pour chaque équipement, paramétrer une adresse de segment (segment number) unique (de 1 à 14). 
+* Pour chaque équipement, paramétrer une adresse de segment (segment number) unique (de 1 à 14).
 * Paramétrer son numéro d’équipement (Device Number) à 1.
 * Procéder à la connexion comme indiqué.
 * Désigner un et un seul équipement comme celui alimentant le bus.
@@ -308,12 +308,12 @@ Installer la Box :
 * Installer la Box en un lieu central permettant d’assurer la réception de tous les capteurs.
 * Si la qualité du signal LoRa est bonne : conserver l’antenne d’origine installée sur la Box.
 image:images/box_lora_antenna.png[]
-* Si la qualité de signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne. 
-* Si la qualité de signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal. 
+* Si la qualité de signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne.
+* Si la qualité de signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal.
 
 Pour chaque capteur :
 
 * Ajouter le capteur sur la {ws-console}[console utilisateur] en le nommant pour qu’il soit identifiable.
 * Envoyer la configuration à la Box.
-* Activer le capteur ; pour ce faire, utiliser la documentation technique du fabricant. 
+* Activer le capteur ; pour ce faire, utiliser la documentation technique du fabricant.
 * Vérifier sur la console utilisateur que le capteur est bien détecté.
