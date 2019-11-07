@@ -1,4 +1,4 @@
-= Guide d’installation
+= Box Wattsense - Guide d’installation
 :Author: Wattsense
 :Email: contact@wattsense.com
 :Revision: 0.1
