@@ -1,20 +1,18 @@
-OUTDIR=output
-
 LANGS=fr en
-OUTFILES=$(foreach l,$(LANGS),$(OUTDIR)/guide_$(l).ext)
+OUTFILES=$(foreach l,$(LANGS),guide_$(l).ext)
 
 all: html docbook pdf
 html: $(OUTFILES:.ext=.html)
 docbook: $(OUTFILES:.ext=.xml)
 pdf: $(OUTFILES:.ext=.pdf)
 
-$(OUTDIR)/guide_%.html: guide_%.adoc
-	asciidoctor $< -D $(OUTDIR)
+guide_%.html: guide_%.adoc
+	asciidoctor $<
 
-$(OUTDIR)/guide_%.xml: guide_%.adoc
-	asciidoctor -b docbook5 $< -D $(OUTDIR)
+guide_%.xml: guide_%.adoc
+	asciidoctor -b docbook5 $<
 
-$(OUTDIR)/guide_%.pdf: $(OUTDIR)/guide_%.xml
-	dblatex --pdf $< -O $(OUTDIR)
+guide_%.pdf: guide_%.xml
+	dblatex --pdf $<
 
 .PHONY: all
