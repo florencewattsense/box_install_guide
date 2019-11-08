@@ -1,4 +1,4 @@
-= Box Wattsense - Guide d’installation
+= Box Wattsense - Installation Guide
 :Author: Wattsense
 :Email: contact@wattsense.com
 :Revision: 0.1
@@ -7,350 +7,376 @@
 
 :ws-console: https://console.wattsense.com
 
-== De quoi avez-vous besoin avant de commencer ?
+== What do you need before starting?
 
-=== Matériel fourni
+=== Provided material 
 
 * Box
-* Antenne GSM standard
-* Antenne LoRa standard
+* GSM standard antenna 
+* LoRa standard antenna 
 
 image::images/what_is_supplied.png[]
 
-=== Matériel indispensable
+=== Required material 
 
-* Alimentation 220V vers 12V-24V DC, 2A
-* Câble entre l’alimentation et la Box : 2 fils (rouge, noir), 22 AWG, section minimum : 0.35 mm²
-* Tournevis plat
-* Pince coupante
-* Pince à dénuder
+* Powerline voltage (100 to 250 VAC) power supply to 12V-24V DC, 2A
+* Cable between the power supply and the Box: 2 wires (red, black), 22 AWG, minimum section: 0.35 mm²
+* Flat screwdriver
+* Cutting pliers
+* Wire stripper
 
-=== Matériel optionnel selon le type de connexion
+=== Optional hardware depending on the type of connection
 
-* Câble de raccordement des bus : 2 fils, 24 AWG, section minimum : 0.22 mm² + tresse
-* Câble(s) ethernet
-* Switch ethernet
-* Passerelle USB Echelon U60 FT DIN (pour LON FT10)
-* Antenne GSM Grand Gain
-* Antenne LoRa Grand Gain
-* Câble pour antenne GSM ou LoRa
-* Ruban adhésif double face haute performance
-* Documentation technique des équipements
-* Documentation technique des capteurs IoT
-* Schéma du ou des réseau(x) de communication de la GTB
+* Bus connection cable: 2 wires, 24 AWG, minimum section: 0.22 mm² + braid
+* Ethernet cables
+* Ethernet switch
+* Echelon U60 FT DIN USB Gateway (for LON FT10)
+* High-gain GSM antenna
+* High-gain LoRa antenna
+* GSM or LoRa antenna cable
+* Double-sided high performance adhesive tape
+* Technical documentation of equipment
+* Technical documentation of IoT sensors
+* Schematic of the communication network(s) of the BMS
 
-=== Accès informatique à la console Wattsense
+=== Computer access to the Wattsense console
 
-* Chaque client bénéficie d’un espace dédié sur la console utilisateur Wattsense à l’adresse {ws-console}.
-Cette interface lui permet de gérer son parc de Box.
-* Une Box doit avoir été activée au préalable pour pouvoir être complètement installée et configurée.
-* S’il n’a pas déjà activé la Box, demander à l’administrateur du compte client de créer un accès « installateur » sur la console utilisateur Wattsense et récupérer les données de connexion (adresse e-mail et mot de passe).
-* Une fois sur site, activer la Box sur la console :
-** Se connecter à la console : saisir l’e-mail et le mot de passe fournis par l’administrateur et cliquer sur « Se connecter ».
-** Saisir l’identifiant alphanumérique de la Box dans le rectangle de recherche en haut.
-** Cliquer sur « Activer ».
-** Donner obligatoirement un nom à la Box dans le champ « Nom » (par exemple le nom du site où elle va être installée).
-** Ajouter éventuellement des informations complémentaires dans le champ « Description » afin de bien identifier la Box (par exemple l’étage ou le lieu précis d’installation si plusieurs Box sont installées dans un même site).
-** Cliquer sur « Activer la Box ».
-* Vous pourrez ensuite accéder aux outils de configuration.
+* Each customer has a dedicated space on the Wattsense User Console at https://console.wattsense.com. This interface allows them to manage its fleet of Boxes.
+* A Box must have been activated in advance before it can be fully installed and configured.
+* If he hasn’t activated the Box, ask the administrator of the client account to create an "installation" access on the Wattsense user console and retrieve the login information (email address and password).
+* Once on-site, activate the Box on the console:
+** How to Log in to the console: enter the email and password provided by the administrator and click on "Log in".
+** Enter the alphanumeric identifier of the Box in the search rectangle at the top.
+** Click on "Activate".
+** It is required to give the Box a name in the "Name" field (for example, the name of the site where it will be installed).
+** If necessary, add additional information in the "Description" field in order to clearly identify the Box (for example the floor or the precise place of installation if on the same site there are several Boxes).
+** Click on "Activate the Box".
+* You will then be able to access the configuration tools.
 
-== Alimentation électrique de la Box
+== The power supply of the Box
 
-S’assurer que la Box a été activée au préalable sur la {ws-console}[console utilisateur].
+Make sure that the Box has been activated beforehand on the user console.
 
-* Placer idéalement la Box dans une armoire ou un coffret électrique.
-* Fixer la Box :
-** Clipper la Box sur un rail DIN.
+* Ideally, place the Box in an electrical enclosure or cabinet.
+* Attach the Box:
+** Mount the Box on a DIN rail.
 +
 image::images/box_install_din_rail.png[]
-** Ou Fixer 2 vis sur un mur et accrocher la Box en utilisant les encoches au dos du boîtier : vis de 4 mm de diamètre au maximum, avec tête de 7.5 mm de diamètre au maximum, espacement de 89.4 mm.
+** Or attach 2 screws to a wall and hook the Box using the notches on the back of the case: Screws of maximum 4 mm in diameter, with a head of maximum 7.5 mm diameter, a spacing of 89.4 mm.
+
 +
 image::images/box_install_wall_mount.png[]
-* Utiliser une alimentation électrique DC de 12V à 24V, 2A.
-* Visser le câble dans le connecteur d’alimentation de la Box.
+* Use a DC power supply of 12V to 24V, 2A.
+* Screw the cable into the power connector of the Box.
 +
 image::images/box_power_connector_wiring.png[]
-* Connecter le câble à l’alimentation électrique.
+* Connect the cable to the power supply.
 +
 image::images/box_power_full_wiring.png[]
-* Vérifier que la LED « Power » est allumée (lumière verte fixe).
+* Check that the "Power" LED is lit (steady green light).
 +
 image::images/box_power_led_on.png[]
-* Attendre une dizaine de secondes : la LED « Heartbeat » clignote (lumière verte).
+* Wait for ten seconds: the "Heartbeat" LED flashes (green light).
 +
 image::images/box_heartbeat_blink.png[]
-* Attendre que la LED GSM clignote ; si la LED ne clignote pas au bout de quelques minutes, voir chapitre Antenne GSM.
+* Wait for the GSM LED to flash; if the LED does not flash after a few minutes, see the GSM Antenna chapter.
 +
 image::images/box_gsm_led_blink.png[]
-* Vérifier que la Box apparaît sur la console : l'indicateur de présence de la box passe de rouge à vert.
-* Si la Box apparaît sur la console, elle est fonctionnelle ; vous pouvez passer à l’étape de connexion de la Box aux équipements et/ou au réseau du bâtiment.
-* Si la Box n’apparaît pas sur la console, voir chapitre Antenne GSM.
+* Check that the Box appears on the console: the presence indicator of the Box changes from red to green.
+* If the Box appears on the console, it is functional; you can go to the connection step of the Box to the equipment and/or the network of the building.
+* If the Box does not appear on the console, see the GSM Antenna chapter.
 
-== Antenne GSM
+== GSM Antenna
 
-La Box est fournie avec une antenne GSM standard.
+The Box is supplied with a standard GSM antenna.
 
-* Si la qualité du signal GSM est bonne : conserver l’antenne d’origine installée sur la Box.
+* If the quality of the GSM signal is good: keep the original antenna installed on the Box.
 +
 image::images/box_gsm_antenna.png[]
-* Si la qualité du signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne.
-* Si la qualité du signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal.
+* If the signal quality is insufficient: move the original antenna out of the cabinet; use an RF extension cord with SMA connector, up to 2 meters, + 1 adhesive support to hold the antenna.
+* If the signal quality is still insufficient: use a high-gain antenna with a maximum of 10 meters of cable; this antenna can, for example, be moved to the outside or to the other floors to obtain a better signal quality.
 
-== Pour connecter la Box à une GTB
+== To connect the Box to the BMS 
 
-* Déterminer le ou les type(s) de réseau associé(s) à la GTB (protocoles de communication entre le serveur GTB et les équipements techniques).
-* Obtenir au préalable si possible le schéma du ou des réseau(x) de communication de la GTB.
-* Identifier où et comment le serveur GTB est connecté au réseau du bâtiment.
+* Determine the type(s) of network(s) associated with the BMS (communication protocols between the BMS server and the technical equipment).
+* Obtain, if possible, the schematic of the communication network(s) of the BMS.
+* Identify where and how the BMS server connects to the building's network. 
 +
 image::images/bms_diagram_withtext.png[]
 
-=== En cas de réseau IP (hors LON)
+=== In case of Network IP (Except LON)
 
-Connexion :
+Connection: 
 
-* Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
+* Make sure to have an Ethernet cable
+* Connect the cable to the Ethernet port of the Box “ETH1” or “ETH2”. 
 +
 image::images/box_ip_eth_plug.png[]
-* Connecter la Box au switch (réseau IP) sur lequel est connecté le PC de supervision / le serveur GTB.
-* Vérifier que la LED ETH1 ou ETH2 s’allume.
+* Connect the Box to the switch (network IP) on which the supervisory PC/BMS server is connected.
+* Check that the ETH1 or ETH2 LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
 
-Paramétrage :
+Configuration:
 
-* S’il n’existe pas de DHCP sur le réseau, attribuer une adresse IP statique à la Box (voir avec le responsable informatique du bâtiment).
-* S’il existe un DHCP sur le réseau, l’adresse est attribuée automatiquement.
+* If there is not a  DHCP server on the network, attribute a static IP address to the Box (Discuss with the building’s IT manager).
+* If there is a DHCP server on the network, the address is automatically assigned.
 
-Informations à récupérer en prévision de la configuration :
+Information to retrieve in preparation for the configuration:
 
-* Pour chaque équipement qui communique en Modbus IP
-** Effectuer depuis le logiciel GTB un extrait des propriétés disponibles : liste des types de données fournies par les différents équipements et auxquelles la GTB a accès.
-** En cas d’impossibilité d’extraire ces informations, récupérer l’adresse IP et le port TCP (et si besoin, pour certains équipements, l’adresse de l’esclave « slave ID »), la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
-* En cas de réseau BACnet IP
-** Noter le port BACnet du réseau (ces informations seront nécessaires pour la configuration de l’installation).
+* For each device that communicates in IP Modbus 
+** From the BMS software, perform an extract of the available properties: list the data types provided by the different devices to which the BMS has access.
+** If it is impossible to retrieve this information, recuperate the IP address and TCP port (and if needed, for some devices, the slave address (Slave ID), the brand, and model of the equipment, and extra identifying information. This information is necessary for the installation configuration and the recuperation of data.
+* In the case of a BACnet IP network
+** Write down the BACnet port of the network. This information will be necessary for the installation configuration and the recuperation of data.
 
-=== En cas de réseau LON IP-852
+=== In case of LON IP-852 network 
 
-Connexion :
+Connection:
 
-* Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
+* Make sure to have an Ethernet cable.
+* Connect the cable to the Ethernet ports of the Box "ETH1" or "ETH2".
 +
 image::images/box_ip_eth_plug.png[]
-* Connecter l’autre extrémité du câble au serveur IP-852 du réseau LON.
+* Connect the other end of the cable to the IP-852 server on the LON network.
 +
 image::images/lon_ip_gateway_network.png[]
-* Vérifier que la LED ETH1 ou ETH2 s’allume.
+* Verify that the ETH1 or ETH2 LED lights up
 +
 image::images/box_ip_eth_led_on.png[]
-* Enregistrer l’adresse IP de la BOX sur le serveur IP-852 du réseau LON ; le mot de passe du serveur IP-852 est probablement requis.
+* Register the IP address of the Box on the IP-852 server of the LON network; the IP-852 server’s password is probably required.
 
-Informations à récupérer en prévision de la configuration :
+Information to retrieve in preparation for the configuration:
 
-* Noter le neuron-ID, la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
-* Si vous avez le logiciel NL220, exporter la database LON sous forme d’un fichier archive ou bien sous forme de fichier NLC.
+* Write down the neuron-ID, brand and model of the equipment, and any identifying information. This information will be necessary for the installation configuration and to recuperate data.
+* If you have the NL220 software, export the LON database as an archive file or as an NLC file.
 
-=== En cas de réseau LON FT10
+=== In case of LON FT10 network
 
-Connexion :
+Connection: 
 
-* Prévoir une passerelle USB Echelon U60 FT DIN.
+* Make sure to have a USB Echelon U60 FT DIN gateway. 
 +
 image::images/lon_ft10_echelon_u60.png[]
-* Connecter cette passerelle au port USB 1 ou 2 de la Box.
+* Connect this gateway to the USB port 1 or 2 of the Box.
 +
 image::images/lon_ft10_echelon_gateway.png[]
-* Connecter aussi cette passerelle au réseau LON FT10.
+* Connect also this gateway to the LON FT10 network. 
 +
 image::images/lon_ft10_echelon_gateway_to_network.png[]
 
-Informations à récupérer en prévision de la configuration :
+== Information to recuperate in preparation for the configuration:
 
-* Noter le neuron-ID, la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
-* Si vous avez le logiciel NL220, exporter la database LON sous forme d’un fichier archive ou bien sous forme de fichier NLC.
+* Write down the neuron-ID, brand and model of the equipment, and any identifying information. This information will be necessary for  the installation configuration and the recuperation of data.
+* If you have the NL220 software, export the LON database as an archive file or as an NLC file.
 
-== Pour connecter la Box directement aux équipements techniques en l’absence de GTB
+== To connect the Box directly to the technical equipment in the absence of a BMS
 
-* Préparer la liste des équipements à connecter et de leur protocole de communication.
-* Réunir la documentation technique de chaque fabricant pour savoir où et comment s’y raccorder (wizard de configuration de la {ws-console}[console utilisateur], site du fabricant, etc.).
-* Elaborer un schéma d’installation.
+* Prepare the list of equipment to be connected and their respective communication protocols.
+* Collect the technical documentation of each manufacturer to know where and how to connect to its devices (user console, configuration wizard, manufacturer's site, etc.).
+* Draw up an installation schematic.
 
-=== L’équipement communique en Modbus IP
+=== The equipment communicates in Modbus IP 
 
-Pour connecter 1 seul équipement
+To connect only 1 equipment
 
-* Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
+* Make sure to have an Ethernet cable.
+* Connect the cable to the Ethernet port of the Box "ETH1" or "ETH2".
 +
 image::images/box_ip_eth_plug.png[]
-* Connecter l’autre extrémité du câble à l’équipement.
-* Vérifier que la LED ETH1 ou ETH2 s’allume.
+* Connect the other end of the cable to the equipment.
+* Verify that the ETH1 or ETH2 LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
 
-Pour connecter 2 équipements
+To connect 2 devices
 
-* Prévoir 2 câbles ethernet.
-* Connecter les câbles aux ports ethernet de la Box « ETH1 » et « ETH2 ».
+* Make sure to have 2 Ethernet cables.
+* Connect the cables to the Ethernet ports of the Box "ETH1" and "ETH2".
 +
 image::images/box_ip_dual_eth_plug.png[]
-* Connecter les autres extrémités des câbles aux 2 équipements.
-* Vérifier que les LED ETH1 et ETH2 s’allument.
+* Connect the other ends of the cables to the 2 devices.
+* Check that the "ETH1" and "ETH2" LEDs light up. 
 +
 image::images/box_ip_both_eth_led_on.png[]
 
-Pour connecter 3 équipements ou plus
+To connect 3 types of equipment or more make sure to:
 
-* Prévoir un câble ethernet pour la Box.
-* Prévoir autant de câbles ethernet que d’équipements à connecter.
-* Prévoir un switch ethernet.
-* Brancher l’alimentation du switch.
-* Connecter un câble ethernet au port ethernet de la Box « ETH1 » ou « ETH2 ».
+* Have an Ethernet cable for the Box.
+* Have as many Ethernet cables as equipment to connect.
+* Have an Ethernet switch.
+* Connect the switch to the power supply
+* Connect an Ethernet cable to the Ethernet port of the Box "ETH1" or "ETH2".
 +
 image::images/box_ip_eth_plug.png[]
-* Connecter l’autre extrémité de ce câble au switch ethernet.
+* Connect the other end of this cable to the Ethernet switch.
 +
 image::images/box_ip_eth_switch.png[]
-* Vérifier que la LED ETH1 ou ETH2 s’allume.
+* Check that the "ETH1" or "ETH2" LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
-* Connecter tous les équipements au switch via les câbles ethernet.
+* Connect all equipment to the switch via the Ethernet cables.
 
-Pour paramétrer chacun des équipements
+To configure each of the types of equipment
 
-* A partir de la documentation technique de l’équipement, récupérer son adresse IP et le port TCP (et si besoin, pour certains équipements, l’adresse de l’esclave « slave ID »).
-* Si l’équipement n’a pas d’adresse IP, lui en attribuer une, de type 192.168.1.1 pour le 1er équipement, puis 192.168.1.2 pour le 2e équipement, 192.168.1.3 pour le 3e équipement, et ainsi de suite.
-* Noter l’adresse IP et le port TCP (et si besoin, pour certains équipements, l’adresse de l’esclave « slave ID »), la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
+* Using the technical documentation of the equipment, find its IP address and TCP port (and if necessary, for some devices, the address of the slave "Slave ID").
+* If the equipment does not have an IP address, assign one to it, type 192.168.1.1 for the first device, then 192.168.1.2 for the second device, 192.168.1.3 for the third device, and so on.
+* Write down the IP address and TCP port (and if necessary, for certain devices, the address of the Slave ID), the brand and model of the equipment, and any information that allows it to be identified. This information will be necessary for the installation configuration and for the recuperation of data.
 
-=== L’équipement communique en Modbus RTU (RS485)
+=== The equipment communicates in Modbus RTU (RS485)
 
-Organisation de l’architecture des Bus :
+Organization of the Bus architecture:
 
-* Réunir les informations nécessaires pour chaque équipement : vitesse du Bus, taille du caractère, bit de parité, bit de stop (depuis le wizard de configuration de la {ws-console}[console utilisateur], la documentation technique du fabricant, ou directement dans les panneaux de contrôle de l’équipement).
-* L’objectif est de créer au maximum 2 réseaux regroupant chacun les équipements ayant une configuration de communication identique pour les affecter aux 2 ports RS 485 de la Box.
-* Si les caractéristiques des équipements impliquent de constituer plus de 2 réseaux homogènes, il est nécessaire de commander une autre Box.
+* Gather the necessary information for each device: Bus speed, character size, parity bit, stop bit (from the user console's configuration wizard, recuperate the manufacturer's technical documentation, or directly from the control panels of the equipment).
+* The goal is to create a maximum of 2 networks, each grouping equipment with the same communication configuration and assign them to the 2 RS485 ports of the Box.
+* If the characteristics of the equipment need to constitute more than 2 homogeneous networks, it is necessary to order another Box.
 
-Pour connecter les équipements :
++
+image::images/rs485_ok_compat_equip.png[]
 
-* Attention : Ne jamais regrouper sur le même bus des équipements ayant des paramètres de communication différents.
-* Câbler en série le réseau ou chacun des 2 réseaux.
-* Connecter le réseau à un port RS485 de la Box.
 
-Pour paramétrer chacun des équipements
++
+image::images/rs485_wrong_no_equip_compat.png[]
 
-* Paramétrer l’adresse du 1er esclave Modbus à 1, le 2e à 2, le 3e à 3 et ainsi de suite.
-* Attention : Un réseau ne doit pas contenir plusieurs esclaves ayant la même adresse.
-* Noter le réseau sur lequel l’équipement est connecté ainsi que son adresse, la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
 
-=== L’équipement communique en BACnet IP
++
+image::images/rs485_right_2networks_compat.png[]
 
-Pour connecter 1 seul équipement
 
-* Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
+To connect the equipment:
+
+* Caution: Do not group together devices with different communication parameters on the same bus.
+* Wire in series the network or each of the 2 networks.
+* Connect the network to an RS485 port of the Box.
+
+
++
+image::images/rs485_good_wiring.png[]
+
+
++
+image::images/rs485_bad_wiring.png[] 
+
+
+* Connect the network to an RS485 port of the Box 
++
+image::images/rs485_plug_details.png[] 
+
+To configure each one of the equipment
+
+* Configure the address of the 1st Modbus slave to 1, the 2nd to 2, the 3rd to 3 and so on.
+* Caution: A network must not contain multiple slaves with the same address.
+* Write down the network to which the equipment is connected as well as its address, brand, and model of the equipment and any identifying information. This information will be necessary for the installation configuration and the recuperation of data.
+
+=== The equipment communicates in BACnet IP
+
+To connect 1 equipment
+
+* Make sure to have an Ethernet cable.
+* Connect the cable to the Ethernet port of the Box  "ETH1" or "ETH2".
 +
 image::images/box_ip_eth_plug.png[]
-* Connecter l’autre extrémité du câble à l’équipement.
-* Vérifier que la LED ETH1 ou ETH2 s’allume.
+* Connect the other end of the cable to the equipment.
+* Verify that the LED "ETH1" or "ETH2" lights up.
 +
 image::images/box_ip_eth_led_on.png[]
 
-Pour connecter 2 équipements ou plus
+To connect 2 or more devices
 
-* Prévoir un câble ethernet pour la Box.
-* Prévoir autant de câbles ethernet que d’équipements à connecter.
-* Prévoir un switch ethernet.
-* Brancher l’alimentation du switch.
-* Connecter un câble ethernet au port ethernet de la Box « ETH1 » ou « ETH2 ».
+* Make sure to have an Ethernet cable for the Box.
+* Make sure to have as many Ethernet cables as equipment to connect.
+* Make sure to have an Ethernet switch.
+* Connect the power supply to the switch.
+* Connect an Ethernet cable to the Ethernet port "ETH1" or "ETH2" of the Box.
 +
 image::images/box_ip_eth_plug.png[]
-* Connecter l’autre extrémité de ce câble au switch ethernet.
-* Vérifier que la LED ETH1 ou ETH2 s’allume.
+* Connect the other end of this cable to the Ethernet switch.
+* Check that the "ETH1" or "ETH2" LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
-* Connecter tous les équipements au switch via les câbles ethernet.
+* Connect all equipment to the switch via the Ethernet cables.
 +
-image::images/box_ip_eth_switch.png[]
+image::images/box_ip_eth_switch.png[] 
 
-Pour paramétrer chacun des équipements
+To configure each of the types of equipment
 
-* A partir de la documentation technique de l’équipement, récupérer son adresse IP et le port BACnet.
-* Si l’équipement n’a pas d’adresse IP, lui en attribuer une, de type 192.168.1.1 pour le 1er équipement, puis 192.168.1.2 pour le 2e équipement, 192.168.1.3 pour le 3e équipement, et ainsi de suite.
-* Noter l’adresse IP et le port BACnet, la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
+* From the technical documentation of the equipment, retrieve its IP address and the BACnet port.
+* If the equipment does not have an IP address, assign one to it, type 192.168.1.1 for the first device, then 192.168.1.2 for the second device, 192.168.1.3 for the third device, and so on.
+* Write down the IP address and BACnet port, the brand, and model of the equipment, and any other identifying information. This information will be required to configure the installation and recuperate data.
 
-=== L’équipement communique en LON FT10
+=== The equipment communicates in LON FT10
 
-Pour connecter les équipements
+To connect the equipment
 
-* Prévoir une passerelle USB Echelon U60 FT DIN.
+* Make sure to have an Echelon U60 FT DIN USB Gateway.
 +
 image::images/lon_ft10_echelon_u60.png[]
-* La connecter au port USB 1 ou 2 de la Box.
+* Connect it to the USB port 1 or 2 in the Box.
 +
 image::images/lon_ft10_echelon_gateway.png[]
-* Câbler la passerelle aux différents équipements comme vous le souhaitez, en série, en étoile, etc.
+* Wire the gateway to different devices as you wish, in series, star, etc.
 +
 image::images/lon_ft10_echelon_gateway_to_network.png[]
 
-Pour paramétrer chacun des équipements
+To configure each of the equipment
 
-* Récupérer le neuron-ID qui figure sur l’équipement.
-* Noter le neuron-ID, la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
-* Si vous avez le logiciel NL220, exporter la database LON sous forme de fichier NLC.
+* Recuperate the neuron-ID that appears on the equipment.
+* Write down the neuron-ID, brand, model of the equipment, and any identifying information. This information will be necessary for the c the installation configuration and the recuperation of data.
+* If you have the NL220 software, export the LON database as an NLC file.
 
-=== L’équipement communique en LON IP-852
+=== The equipment communicates in LON IP-852
 
-Pour connecter 1 ou plusieurs équipements
+To connect 1 or several types of equipment.
 
-* Prévoir un câble ethernet.
-* Connecter le câble au port ethernet de la Box « ETH1 » ou « ETH2 ».
+* Make sure to have an Ethernet cable.
+* Connect the cable to the Ethernet port of the Box "ETH1" or "ETH2".
 +
 image::images/box_ip_eth_plug.png[]
-* Connecter l’autre extrémité du câble au serveur IP-852 du réseau LON.
+* Connect the other end of the cable to the IP-852 server of the LON network.
 +
 image::images/lon_ip_gateway_network.png[]
-* Vérifier que la LED ETH1 ou ETH2 s’allume.
+* Verify that the LED "ETH1" or "ETH2" lights up.
 +
 image::images/box_ip_eth_led_on.png[]
-* Enregistrer l’adresse IP de la BOX sur le serveur IP-852 du réseau LON.
+* Register the IP address of the Box on the IP-852 server of the LON network.
 
-Pour paramétrer chacun des équipements
+To configure each of the different types of equipment
 
-* Noter le neuron-ID, la marque et le modèle de l’équipement, et toute information permettant de l’identifier (ces informations seront nécessaires pour la configuration de l’installation et la restitution des données).
-* Si vous avez le logiciel NL220, exporter la database LON sous forme d’un fichier archive ou bien sous forme de fichier NLC.
+* Write down the neuron-ID, brand, model of the equipment, and any identifying information. This information will be necessary for the installation configuration and the recuperation of data.
+* If you have the NL220 software, export the LON database as an archive file or as a NLC file.
 
-=== L’équipement communique en LPB
+=== The equipment communicates in LPB 
 
-Pour connecter 1 ou plusieurs équipements
+To connect 1 or several types of equipement
 
-* Connecter le bus LPB sur le port X-Bus de la Box
-* Chaque équipement doit relier son signal MB au signal - du X-Bus et son signal DB au +
+* Connect the bus LPB on the X-Bus port of the Box.
+* Each device must connect its MB signal to the X-Bus signal (-) and its DB signal to (+).
 +
 image::images/lpb_plug_details.png[]
 
-Pour paramétrer chacun des équipements
+=== To configure each of the devices
 
-* Par précaution, vérifier que l’équipement n’alimente pas le bus LPB.
-* Pour chaque équipement, paramétrer une adresse de segment (segment number) unique (de 1 à 14).
-* Paramétrer son numéro d’équipement (Device Number) à 1.
-* Procéder à la connexion comme indiqué.
-* Désigner un et un seul équipement comme celui alimentant le bus.
+* As a precaution, check that the equipment does not power the LPB bus.
+* For each device, configure a unique segment address (from 1 to 14).
+* Proceed to make the connection as indicated.
+* Designate one and only one equipment as the one that supplies the bus.
 
-== Pour connecter la Box à des capteurs LoRaWAN
+=== To connect the Box to LoRaWAN sensors 
 
-Installer la Box :
+Install the Box:
 
-* Installer la Box en un lieu central permettant d’assurer la réception de tous les capteurs.
-* Si la qualité du signal LoRa est bonne : conserver l’antenne d’origine installée sur la Box.
+* Install the Box in a central location to ensure the reception of all sensors.
+* If the quality of the LoRa signal is good: keep the original antenna installed on the Box.
 +
 image::images/box_lora_antenna.png[]
-* Si la qualité de signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne.
-* Si la qualité de signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal.
+* If the signal quality is insufficient: move the original antenna out of the cabinet; use an RF extension cord with a SMA connector up to 2 meters + 1 adhesive support to hold the antenna.
+* If the signal quality is still insufficient: use a High-gain antenna with a maximum of 10 meters of cable; this antenna can for example be used outside or in other floors to obtain the best signal quality. 
 
-Pour chaque capteur :
+For each sensor:
 
-* Ajouter le capteur sur la {ws-console}[console utilisateur] en le nommant pour qu’il soit identifiable.
-* Envoyer la configuration à la Box.
-* Activer le capteur ; pour ce faire, utiliser la documentation technique du fabricant.
-* Vérifier sur la console utilisateur que le capteur est bien détecté.
+* Add the sensor to the user console (available at https://console.wattsense.com) by naming it to be identifiable.
+* Send the configuration to the Box.
+* Activate the sensor; to do this, use the manufacturer's technical documentation.
+* Check on the user console that the sensor is detected.
+
+
