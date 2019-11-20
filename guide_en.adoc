@@ -21,7 +21,7 @@ image::images/what_is_supplied.png[]
 
 === Required material 
 
-* Powerline voltage (100 to 250 VAC) power supply to 12V-24V DC, 2A
+* Powerline voltage (100 to 250VAC) to 12V-24V DC power supply
 * Cable between the power supply and the Box: 2 wires (red, black), 22 AWG, minimum section: 0.35 mm²
 * Flat screwdriver
 * Cutting pliers
@@ -31,7 +31,7 @@ image::images/what_is_supplied.png[]
 
 * Bus connection cable: 2 wires, 24 AWG, minimum section: 0.22 mm² + braid
 * Ethernet cables
-* Ethernet switch
+* Ethernet switch 
 * Echelon U60 FT DIN USB Gateway (for LON FT10)
 * High-gain GSM antenna
 * High-gain LoRa antenna
@@ -43,9 +43,9 @@ image::images/what_is_supplied.png[]
 
 === Computer access to the Wattsense console
 
-* Each customer has a dedicated space on the Wattsense User Console at https://console.wattsense.com. This interface allows them to manage its fleet of Boxes.
+* Each customer has a dedicated space on the Wattsense User Console at https://console.wattsense.com. This interface allows them to manage their fleet of Boxes.
 * A Box must have been activated in advance before it can be fully installed and configured.
-* If he hasn’t activated the Box, ask the administrator of the client account to create an "installation" access on the Wattsense user console and retrieve the login information (email address and password).
+* If the Box hasn’t been activated, ask the administrator of the account to create an "installation" access on the Wattsense user console and retrieve the login information (email address and password).
 * Once on-site, activate the Box on the console:
 ** How to Log in to the console: enter the email and password provided by the administrator and click on "Log in".
 ** Enter the alphanumeric identifier of the Box in the search rectangle at the top.
@@ -104,17 +104,17 @@ image::images/box_gsm_antenna.png[]
 * Obtain, if possible, the schematic of the communication network(s) of the BMS.
 * Identify where and how the BMS server connects to the building's network. 
 +
-image::images/bms_diagram_withtext.png[]
+image::images/bms-digram-withtext-en.png[]
 
-=== In case of Network IP (Except LON)
+=== In case of IP network (Except LON)
 
 Connection: 
 
 * Make sure to have an Ethernet cable
-* Connect the cable to the Ethernet port of the Box “ETH1” or “ETH2”. 
+* Connect the cable to the Ethernet port of the Box ETH1 or ETH2. 
 +
 image::images/box_ip_eth_plug.png[]
-* Connect the Box to the switch (network IP) on which the supervisory PC/BMS server is connected.
+* Connect the Box to the switch (IP network) on which the supervision PC/BMS server is connected.
 * Check that the ETH1 or ETH2 LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
@@ -126,18 +126,18 @@ Configuration:
 
 Information to retrieve in preparation for the configuration:
 
-* For each device that communicates in IP Modbus 
+* For each device that communicates in Modbus IP 
 ** From the BMS software, perform an extract of the available properties: list the data types provided by the different devices to which the BMS has access.
-** If it is impossible to retrieve this information, recuperate the IP address and TCP port (and if needed, for some devices, the slave address (Slave ID), the brand, and model of the equipment, and extra identifying information. This information is necessary for the installation configuration and the recuperation of data.
+** If it is impossible to retrieve this information, recuperate the IP address and TCP port (and if needed, for some devices, the slave address (Slave ID), the brand, and model of the equipment, and extra identifying information. This information is necessary for the installation configuration and to retrieve data.
 * In the case of a BACnet IP network
-** Write down the BACnet port of the network. This information will be necessary for the installation configuration and the recuperation of data.
+** Write down the BACnet port of the network. This information will be necessary for the installation configuration and to retrieve data.
 
 === In case of LON IP-852 network 
 
 Connection:
 
 * Make sure to have an Ethernet cable.
-* Connect the cable to the Ethernet ports of the Box "ETH1" or "ETH2".
+* Connect the cable to the Ethernet ports of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
 * Connect the other end of the cable to the IP-852 server on the LON network.
@@ -150,7 +150,7 @@ image::images/box_ip_eth_led_on.png[]
 
 Information to retrieve in preparation for the configuration:
 
-* Write down the neuron-ID, brand and model of the equipment, and any identifying information. This information will be necessary for the installation configuration and to recuperate data.
+* Write down the neuron-ID, brand and model of the equipment, and any identifying information. This information will be necessary for the installation configuration and to retrieve data.
 * If you have the NL220 software, export the LON database as an archive file or as an NLC file.
 
 === In case of LON FT10 network
@@ -167,9 +167,9 @@ image::images/lon_ft10_echelon_gateway.png[]
 +
 image::images/lon_ft10_echelon_gateway_to_network.png[]
 
-Information to recuperate in preparation for the configuration:
+Information to get  in preparation for the configuration:
 
-* Write down the neuron-ID, brand and model of the equipment, and any identifying information. This information will be necessary for  the installation configuration and the recuperation of data.
+* Write down the Neuron-ID, brand and model of the equipment, and any identifying information. This information will be necessary for  the installation configuration and to retrieve data.
 * If you have the NL220 software, export the LON database as an archive file or as an NLC file.
 
 == To connect the Box directly to the technical equipment in the absence of a BMS
@@ -183,7 +183,7 @@ Information to recuperate in preparation for the configuration:
 To connect only 1 equipment
 
 * Make sure to have an Ethernet cable.
-* Connect the cable to the Ethernet port of the Box "ETH1" or "ETH2".
+* Connect the cable to the Ethernet port of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
 * Connect the other end of the cable to the equipment.
@@ -194,42 +194,42 @@ image::images/box_ip_eth_led_on.png[]
 To connect 2 devices
 
 * Make sure to have 2 Ethernet cables.
-* Connect the cables to the Ethernet ports of the Box "ETH1" and "ETH2".
+* Connect the cables to the Ethernet ports of the Box ETH1 and ETH2.
 +
 image::images/box_ip_dual_eth_plug.png[]
-* Connect the other ends of the cables to the 2 devices.
-* Check that the "ETH1" and "ETH2" LEDs light up. 
+* Connect the cables to the 2 devices.
+* Check that the ETH1 and ETH2 LEDs light up. 
 +
 image::images/box_ip_both_eth_led_on.png[]
 
-To connect 3 types of equipment or more make sure to:
+To connect 3 equipment or more make sure to:
 
 * Have an Ethernet cable for the Box.
 * Have as many Ethernet cables as equipment to connect.
 * Have an Ethernet switch.
 * Connect the switch to the power supply
-* Connect an Ethernet cable to the Ethernet port of the Box "ETH1" or "ETH2".
+* Connect an Ethernet cable to the Ethernet port of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
 * Connect the other end of this cable to the Ethernet switch.
 +
 image::images/box_ip_eth_switch.png[]
-* Check that the "ETH1" or "ETH2" LED lights up.
+* Check that the ETH1 or ETH2 LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
 * Connect all equipment to the switch via the Ethernet cables.
 
-To configure each of the types of equipment
+To configure each of the equipment
 
 * Using the technical documentation of the equipment, find its IP address and TCP port (and if necessary, for some devices, the address of the slave "Slave ID").
-* If the equipment does not have an IP address, assign one to it, type 192.168.1.1 for the first device, then 192.168.1.2 for the second device, 192.168.1.3 for the third device, and so on.
-* Write down the IP address and TCP port (and if necessary, for certain devices, the address of the Slave ID), the brand and model of the equipment, and any information that allows it to be identified. This information will be necessary for the installation configuration and for the recuperation of data.
+* If the equipment does not have an IP address, assign one to it, 192.168.1.1 for the first device, then 192.168.1.2 for the second device, 192.168.1.3 for the third device, and so on.
+* Write down the IP address and TCP port (and if necessary, for certain devices, the address of the Slave ID), the brand and model of the equipment, and any information that allows it to be identified. This information will be necessary for the installation configuration and to retrieve data.
 
 === The equipment communicates in Modbus RTU (RS485)
 
 Organization of the Bus architecture:
 
-* Gather the necessary information for each device: Bus speed, character size, parity bit, stop bit (from the user console's configuration wizard, recuperate the manufacturer's technical documentation, or directly from the control panels of the equipment).
+* Gather the necessary information for each device: Bus speed, character size, parity bit, stop bit (from the user console's configuration wizard, get the manufacturer's technical documentation, or directly from the control panels of the equipment).
 * The goal is to create a maximum of 2 networks, each grouping equipment with the same communication configuration and assign them to the 2 RS485 ports of the Box.
 * If the characteristics of the equipment need to constitute more than 2 homogeneous networks, it is necessary to order another Box.
 
@@ -247,8 +247,8 @@ image::images/rs485_right_2networks_compat.png[]
 
 To connect the equipment:
 
-* Caution: Do not group together devices with different communication parameters on the same bus.
-* Wire in series the network or each of the 2 networks.
+* Caution: Do not group together devices with different communication parameters on the same Bus.
+* Serial wire the network or each of the 2 networks.
 * Connect the network to an RS485 port of the Box.
 
 
@@ -268,18 +268,18 @@ To configure each one of the equipment
 
 * Configure the address of the 1st Modbus slave to 1, the 2nd to 2, the 3rd to 3 and so on.
 * Caution: A network must not contain multiple slaves with the same address.
-* Write down the network to which the equipment is connected as well as its address, brand, and model of the equipment and any identifying information. This information will be necessary for the installation configuration and the recuperation of data.
+* Write down the network to which the equipment is connected as well as its address, brand, and model of the equipment and any identifying information. This information will be necessary for the installation configuration and to retrieve data.
 
 === The equipment communicates in BACnet IP
 
 To connect 1 equipment
 
 * Make sure to have an Ethernet cable.
-* Connect the cable to the Ethernet port of the Box  "ETH1" or "ETH2".
+* Connect the cable to the Ethernet port of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
 * Connect the other end of the cable to the equipment.
-* Verify that the LED "ETH1" or "ETH2" lights up.
+* Verify that the LED ETH1 or ETH2 lights up.
 +
 image::images/box_ip_eth_led_on.png[]
 
@@ -289,22 +289,22 @@ To connect 2 or more devices
 * Make sure to have as many Ethernet cables as equipment to connect.
 * Make sure to have an Ethernet switch.
 * Connect the power supply to the switch.
-* Connect an Ethernet cable to the Ethernet port "ETH1" or "ETH2" of the Box.
+* Connect an Ethernet cable to the Ethernet port ETH1 or ETH2 of the Box.
 +
 image::images/box_ip_eth_plug.png[]
 * Connect the other end of this cable to the Ethernet switch.
-* Check that the "ETH1" or "ETH2" LED lights up.
+* Check that the ETH1 or ETH2 LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
 * Connect all equipment to the switch via the Ethernet cables.
 +
 image::images/box_ip_eth_switch.png[] 
 
-To configure each of the types of equipment
+To configure each of the equipment
 
 * From the technical documentation of the equipment, retrieve its IP address and the BACnet port.
-* If the equipment does not have an IP address, assign one to it, type 192.168.1.1 for the first device, then 192.168.1.2 for the second device, 192.168.1.3 for the third device, and so on.
-* Write down the IP address and BACnet port, the brand, and model of the equipment, and any other identifying information. This information will be required to configure the installation and recuperate data.
+* If the equipment does not have an IP address, assign one to it, 192.168.1.1 for the first device, then 192.168.1.2 for the second device, 192.168.1.3 for the third device, and so on.
+* Write down the IP address and BACnet port, the brand, and model of the equipment, and any other identifying information. This information will be required to configure the installation and to retrieve data.
 
 === The equipment communicates in LON FT10
 
@@ -316,52 +316,52 @@ image::images/lon_ft10_echelon_u60.png[]
 * Connect it to the USB port 1 or 2 in the Box.
 +
 image::images/lon_ft10_echelon_gateway.png[]
-* Wire the gateway to different devices as you wish, in series, star, etc.
+* Wire the gateway to different devices as you wish, in serial, star, etc.
 +
 image::images/lon_ft10_echelon_gateway_to_network.png[]
 
 To configure each of the equipment
 
-* Recuperate the neuron-ID that appears on the equipment.
-* Write down the neuron-ID, brand, model of the equipment, and any identifying information. This information will be necessary for the c the installation configuration and the recuperation of data.
+* Retrieve the Neuron-ID that appears on the equipment.
+* Write down the Neuron-ID, brand, model of the equipment, and any identifying information. This information will be necessary for the   installation configuration and to retrieve data.
 * If you have the NL220 software, export the LON database as an NLC file.
 
 === The equipment communicates in LON IP-852
 
-To connect 1 or several types of equipment.
+To connect 1 or several equipment.
 
 * Make sure to have an Ethernet cable.
-* Connect the cable to the Ethernet port of the Box "ETH1" or "ETH2".
+* Connect the cable to the Ethernet port of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
 * Connect the other end of the cable to the IP-852 server of the LON network.
 +
 image::images/lon_ip_gateway_network.png[]
-* Verify that the LED "ETH1" or "ETH2" lights up.
+* Verify that the LED ETH1 or ETH2 lights up.
 +
 image::images/box_ip_eth_led_on.png[]
 * Register the IP address of the Box on the IP-852 server of the LON network.
 
-To configure each of the different types of equipment
+To configure each of the different equipment
 
-* Write down the neuron-ID, brand, model of the equipment, and any identifying information. This information will be necessary for the installation configuration and the recuperation of data.
+* Write down the Neuron-ID, brand, model of the equipment, and any identifying information. This information will be necessary for the installation configuration and to retrieve data.
 * If you have the NL220 software, export the LON database as an archive file or as a NLC file.
 
 === The equipment communicates in LPB 
 
-To connect 1 or several types of equipement
+To connect 1 or several equipement
 
-* Connect the bus LPB on the X-Bus port of the Box.
+* Connect the LPB Bus to the X-Bus port of the Box.
 * Each device must connect its MB signal to the X-Bus signal (-) and its DB signal to (+).
 +
 image::images/lpb_plug_details.png[]
 
 To configure each of the devices
 
-* As a precaution, check that the equipment does not power the LPB bus.
+* As a precaution, check that the equipment does not power the LPB Bus.
 * For each device, configure a unique segment address (from 1 to 14).
 * Proceed to make the connection as indicated.
-* Designate one and only one equipment as the one that supplies the bus.
+* Designate one and only one equipment as the one that supplies the Bus.
 
 == To connect the Box to LoRaWAN sensors 
 
