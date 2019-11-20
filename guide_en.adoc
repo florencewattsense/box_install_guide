@@ -11,7 +11,9 @@
 
 === Provided material 
 
-* Box
+* Box 
+** Dimensions: 160 x 110 x 55 mm
+** Weight: 340 g
 * GSM standard antenna 
 * LoRa standard antenna 
 
@@ -165,7 +167,7 @@ image::images/lon_ft10_echelon_gateway.png[]
 +
 image::images/lon_ft10_echelon_gateway_to_network.png[]
 
-== Information to recuperate in preparation for the configuration:
+Information to recuperate in preparation for the configuration:
 
 * Write down the neuron-ID, brand and model of the equipment, and any identifying information. This information will be necessary for  the installation configuration and the recuperation of data.
 * If you have the NL220 software, export the LON database as an archive file or as an NLC file.
