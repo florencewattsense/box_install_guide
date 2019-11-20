@@ -356,14 +356,14 @@ To connect 1 or several types of equipement
 +
 image::images/lpb_plug_details.png[]
 
-=== To configure each of the devices
+To configure each of the devices
 
 * As a precaution, check that the equipment does not power the LPB bus.
 * For each device, configure a unique segment address (from 1 to 14).
 * Proceed to make the connection as indicated.
 * Designate one and only one equipment as the one that supplies the bus.
 
-=== To connect the Box to LoRaWAN sensors 
+== To connect the Box to LoRaWAN sensors 
 
 Install the Box:
 
