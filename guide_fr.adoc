@@ -2,7 +2,7 @@
 :Author: Wattsense
 :Email: contact@wattsense.com
 :Revision: 0.1
-:Date: 2019/11/04
+:Date: 2019/11/20
 :toc:
 
 :ws-console: https://console.wattsense.com
@@ -12,6 +12,8 @@
 === Matériel fourni
 
 * Box
+** Dimensions : 160 x 110 x 55 mm
+** Poids : 340 g
 * Antenne GSM standard
 * Antenne LoRa standard
 
