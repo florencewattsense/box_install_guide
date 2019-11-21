@@ -15,4 +15,4 @@ guide_%.xml: guide_%.adoc
 guide_%.pdf: guide_%.xml
 	dblatex --pdf $<
 
-.PHONY: all
+#.PHONY: all
