@@ -64,26 +64,32 @@ Make sure that the Box has been activated beforehand on the user console.
 ** Mount the Box on a DIN rail.
 +
 image::images/box_install_din_rail.png[]
-** Or attach 2 screws to a wall and hook the Box using the notches on the back of the case: Screws of maximum 4 mm in diameter, with a head of maximum 7.5 mm diameter, a spacing of 89.4 mm.
 
+** Or attach 2 screws to a wall and hook the Box using the notches on the back of the case: Screws of maximum 4 mm in diameter, with a head of maximum 7.5 mm diameter, a spacing of 89.4 mm.
 +
 image::images/box_install_wall_mount.png[]
+
 * Use a DC power supply of 12V to 24V, 2A.
 * Screw the cable into the power connector of the Box.
 +
 image::images/box_power_connector_wiring.png[]
+
 * Connect the cable to the power supply.
 +
 image::images/box_power_full_wiring.png[]
+
 * Check that the "Power" LED is lit (steady green light).
 +
 image::images/box_power_led_on.png[]
+
 * Wait for ten seconds: the "Heartbeat" LED flashes (green light).
 +
 image::images/box_heartbeat_blink.png[]
+
 * Wait for the GSM LED to flash; if the LED does not flash after a few minutes, see the GSM Antenna chapter.
 +
 image::images/box_gsm_led_blink.png[]
+
 * Check that the Box appears on the console: the presence indicator of the Box changes from red to green.
 * If the Box appears on the console, it is functional; you can go to the connection step of the Box to the equipment and/or the network of the building.
 * If the Box does not appear on the console, see the GSM Antenna chapter.
@@ -95,6 +101,7 @@ The Box is supplied with a standard GSM antenna.
 * If the quality of the GSM signal is good: keep the original antenna installed on the Box.
 +
 image::images/box_gsm_antenna.png[]
+
 * If the signal quality is insufficient: move the original antenna out of the cabinet; use an RF extension cord with SMA connector, up to 2 meters, + 1 adhesive support to hold the antenna.
 * If the signal quality is still insufficient: use a high-gain antenna with a maximum of 10 meters of cable; this antenna can, for example, be moved to the outside or to the other floors to obtain a better signal quality.
 
@@ -114,6 +121,7 @@ Connection:
 * Connect the cable to the Ethernet port of the Box ETH1 or ETH2. 
 +
 image::images/box_ip_eth_plug.png[]
+
 * Connect the Box to the switch (IP network) on which the supervision PC/BMS server is connected.
 * Check that the ETH1 or ETH2 LED lights up.
 +
@@ -140,12 +148,15 @@ Connection:
 * Connect the cable to the Ethernet ports of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
+
 * Connect the other end of the cable to the IP-852 server on the LON network.
 +
 image::images/lon_ip_gateway_network.png[]
+
 * Verify that the ETH1 or ETH2 LED lights up
 +
 image::images/box_ip_eth_led_on.png[]
+
 * Register the IP address of the Box on the IP-852 server of the LON network; the IP-852 server’s password is probably required.
 
 Information to retrieve in preparation for the configuration:
@@ -160,9 +171,11 @@ Connection:
 * Make sure to have a USB Echelon U60 FT DIN gateway. 
 +
 image::images/lon_ft10_echelon_u60.png[]
+
 * Connect this gateway to the USB port 1 or 2 of the Box.
 +
 image::images/lon_ft10_echelon_gateway.png[]
+
 * Connect also this gateway to the LON FT10 network. 
 +
 image::images/lon_ft10_echelon_gateway_to_network.png[]
@@ -186,6 +199,7 @@ To connect only 1 equipment
 * Connect the cable to the Ethernet port of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
+
 * Connect the other end of the cable to the equipment.
 * Verify that the ETH1 or ETH2 LED lights up.
 +
@@ -197,6 +211,7 @@ To connect 2 devices
 * Connect the cables to the Ethernet ports of the Box ETH1 and ETH2.
 +
 image::images/box_ip_dual_eth_plug.png[]
+
 * Connect the cables to the 2 devices.
 * Check that the ETH1 and ETH2 LEDs light up. 
 +
@@ -211,12 +226,15 @@ To connect 3 equipment or more make sure to:
 * Connect an Ethernet cable to the Ethernet port of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
+
 * Connect the other end of this cable to the Ethernet switch.
 +
 image::images/box_ip_eth_switch.png[]
+
 * Check that the ETH1 or ETH2 LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
+
 * Connect all equipment to the switch via the Ethernet cables.
 
 To configure each of the equipment
@@ -232,34 +250,22 @@ Organization of the Bus architecture:
 * Gather the necessary information for each device: Bus speed, character size, parity bit, stop bit (from the user console's configuration wizard, get the manufacturer's technical documentation, or directly from the control panels of the equipment).
 * The goal is to create a maximum of 2 networks, each grouping equipment with the same communication configuration and assign them to the 2 RS485 ports of the Box.
 * If the characteristics of the equipment need to constitute more than 2 homogeneous networks, it is necessary to order another Box.
-
 +
 image::images/rs485_ok_compat_equip.png[]
-
-
 +
 image::images/rs485_wrong_no_equip_compat.png[]
-
-
 +
 image::images/rs485_right_2networks_compat.png[]
-
 
 To connect the equipment:
 
 * Caution: Do not group together devices with different communication parameters on the same Bus.
 * Serial wire the network or each of the 2 networks.
 * Connect the network to an RS485 port of the Box.
-
-
 +
 image::images/rs485_good_wiring.png[]
-
-
 +
 image::images/rs485_bad_wiring.png[] 
-
-
 * Connect the network to an RS485 port of the Box 
 +
 image::images/rs485_plug_details.png[] 
@@ -278,6 +284,7 @@ To connect 1 equipment
 * Connect the cable to the Ethernet port of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
+
 * Connect the other end of the cable to the equipment.
 * Verify that the LED ETH1 or ETH2 lights up.
 +
@@ -292,10 +299,12 @@ To connect 2 or more devices
 * Connect an Ethernet cable to the Ethernet port ETH1 or ETH2 of the Box.
 +
 image::images/box_ip_eth_plug.png[]
+
 * Connect the other end of this cable to the Ethernet switch.
 * Check that the ETH1 or ETH2 LED lights up.
 +
 image::images/box_ip_eth_led_on.png[]
+
 * Connect all equipment to the switch via the Ethernet cables.
 +
 image::images/box_ip_eth_switch.png[] 
@@ -313,9 +322,11 @@ To connect the equipment
 * Make sure to have an Echelon U60 FT DIN USB Gateway.
 +
 image::images/lon_ft10_echelon_u60.png[]
+
 * Connect it to the USB port 1 or 2 in the Box.
 +
 image::images/lon_ft10_echelon_gateway.png[]
+
 * Wire the gateway to different devices as you wish, in serial, star, etc.
 +
 image::images/lon_ft10_echelon_gateway_to_network.png[]
@@ -334,12 +345,15 @@ To connect 1 or several equipment.
 * Connect the cable to the Ethernet port of the Box ETH1 or ETH2.
 +
 image::images/box_ip_eth_plug.png[]
+
 * Connect the other end of the cable to the IP-852 server of the LON network.
 +
 image::images/lon_ip_gateway_network.png[]
+
 * Verify that the LED ETH1 or ETH2 lights up.
 +
 image::images/box_ip_eth_led_on.png[]
+
 * Register the IP address of the Box on the IP-852 server of the LON network.
 
 To configure each of the different equipment
@@ -371,6 +385,7 @@ Install the Box:
 * If the quality of the LoRa signal is good: keep the original antenna installed on the Box.
 +
 image::images/box_lora_antenna.png[]
+
 * If the signal quality is insufficient: move the original antenna out of the cabinet; use an RF extension cord with a SMA connector up to 2 meters + 1 adhesive support to hold the antenna.
 * If the signal quality is still insufficient: use a High-gain antenna with a maximum of 10 meters of cable; this antenna can for example be used outside or in other floors to obtain the best signal quality. 
 
