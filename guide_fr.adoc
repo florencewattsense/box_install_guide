@@ -3,7 +3,7 @@
 :Email: contact@wattsense.com
 :Revision: 0.1
 :Date: 2019/11/20
-:toc:
+:toc: left
 
 :ws-console: https://console.wattsense.com
 
