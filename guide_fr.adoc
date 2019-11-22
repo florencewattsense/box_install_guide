@@ -270,12 +270,25 @@ Organisation de l’architecture des Bus :
 * Réunir les informations nécessaires pour chaque équipement : vitesse du Bus, taille du caractère, bit de parité, bit de stop (depuis le wizard de configuration de la {ws-console}[console utilisateur], la documentation technique du fabricant, ou directement dans les panneaux de contrôle de l’équipement).
 * L’objectif est de créer au maximum 2 réseaux regroupant chacun les équipements ayant une configuration de communication identique pour les affecter aux 2 ports RS 485 de la Box.
 * Si les caractéristiques des équipements impliquent de constituer plus de 2 réseaux homogènes, il est nécessaire de commander une autre Box.
++
+image::images/rs485_ok_compat_equip.png[{twothird-width}]
++
+image::images/rs485_wrong_no_equip_compat.png[{twothird-width}]
++
+image::images/rs485_right_2networks_compat.png[{twothird-width}]
 
 Pour connecter les équipements :
 
 * Attention : Ne jamais regrouper sur le même bus des équipements ayant des paramètres de communication différents.
 * Câbler en série le réseau ou chacun des 2 réseaux.
++
+image::images/rs485_good_wiring.png[{twothird-width}]
++
+image::images/rs485_bad_wiring.png[{twothird-width}]
+
 * Connecter le réseau à un port RS485 de la Box.
++
+image::images/rs485_plug_details.png[{twothird-width}]
 
 Pour paramétrer chacun des équipements
 

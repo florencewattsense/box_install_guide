@@ -269,24 +269,24 @@ Organization of the Bus architecture:
 * The goal is to create a maximum of 2 networks, each grouping equipment with the same communication configuration and assign them to the 2 RS485 ports of the Box.
 * If the characteristics of the equipment need to constitute more than 2 homogeneous networks, it is necessary to order another Box.
 +
-image::images/rs485_ok_compat_equip.png[]
+image::images/rs485_ok_compat_equip.png[{twothird-width}]
 +
-image::images/rs485_wrong_no_equip_compat.png[]
+image::images/rs485_wrong_no_equip_compat.png[{twothird-width}]
 +
-image::images/rs485_right_2networks_compat.png[]
+image::images/rs485_right_2networks_compat.png[{twothird-width}]
 
 To connect the equipment:
 
 * Caution: Do not group together devices with different communication parameters on the same Bus.
 * Serial wire the network or each of the 2 networks.
-* Connect the network to an RS485 port of the Box.
 +
-image::images/rs485_good_wiring.png[]
+image::images/rs485_good_wiring.png[{twothird-width}]
 +
-image::images/rs485_bad_wiring.png[] 
+image::images/rs485_bad_wiring.png[{twothird-width}]
+
 * Connect the network to an RS485 port of the Box 
 +
-image::images/rs485_plug_details.png[] 
+image::images/rs485_plug_details.png[{twothird-width}]
 
 To configure each one of the equipment
 
