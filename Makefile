@@ -6,13 +6,18 @@ html: $(OUTFILES:.ext=.html)
 docbook: $(OUTFILES:.ext=.xml)
 pdf: $(OUTFILES:.ext=.pdf)
 
-guide_%.html: guide_%.adoc
+IMAGES=images/*
+
+guide_%.html: guide_%.adoc $(IMAGES)
 	asciidoctor $<
 
-guide_%.xml: guide_%.adoc
+guide_%.xml: guide_%.adoc $(IMAGES)
 	asciidoctor -b docbook5 $<
 
 guide_%.pdf: guide_%.xml
 	dblatex --pdf $<
 
-#.PHONY: all
+clean:
+	rm *.html *.xml *.pdf
+
+.PHONY: clean
