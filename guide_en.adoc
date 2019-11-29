@@ -129,7 +129,7 @@ image::images/box_gsm_antenna.png[{small}]
 * Obtain, if possible, the schematic of the communication network(s) of the BMS.
 * Identify where and how the BMS server connects to the building's network. 
 +
-image::images/bms_diagram_withtext.png[{twothird-width}]
+image::images/bms-diagram-withtext-en.png[{twothird-width}]
 
 === In case of IP network (Except LON)
 
