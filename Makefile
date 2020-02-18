@@ -14,8 +14,8 @@ guide_%.html: guide_%.adoc $(IMAGES)
 guide_%.xml: guide_%.adoc $(IMAGES)
 	asciidoctor -b docbook5 $<
 
-guide_%.pdf: guide_%.xml
-	dblatex --pdf $<
+guide_%.pdf: guide_%.xml dblatex.xsl
+	dblatex --pdf -p dblatex.xsl $<
 
 clean:
 	rm *.html *.xml *.pdf
