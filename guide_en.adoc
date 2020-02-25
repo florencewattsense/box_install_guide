@@ -121,7 +121,7 @@ The Box is supplied with a standard GSM antenna.
 image::images/box_gsm_antenna.png[{small}]
 
 * If the signal quality is insufficient: move the original antenna out of the cabinet; use an RF extension cord with SMA connector, up to 2 meters, + 1 adhesive support to hold the antenna.
-* If the signal quality is still insufficient: use a high-gain antenna with a maximum of 10 meters of cable; this antenna can, for example, be moved to the outside or to the other floors to obtain a better signal quality.
+* If the signal quality is still insufficient: use a high-gain antenna with a maximum of 10 meters of cable; this antenna can, for example, be moved to the outside or to the other floors to obtain a better signal quality. Please note that, beyond 15 meters of cable, the GSM signal is significantly weakened.
 
 == To connect the Box to the BMS 
 
