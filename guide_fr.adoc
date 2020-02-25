@@ -123,7 +123,7 @@ La Box est fournie avec une antenne GSM standard.
 image::images/box_gsm_antenna.png[{small}]
 
 * Si la qualité du signal est insuffisante : déporter l’antenne d’origine à l’extérieur de l’armoire ; utiliser une rallonge de câble RF avec connecteur SMA de 2 mètres maximum + 1 support adhésif pour maintenir l’antenne.
-* Si la qualité du signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal.
+* Si la qualité du signal est toujours insuffisante : utiliser une antenne Grand Gain avec au maximum 10 mètres de câble ; cette antenne peut par exemple être déportée à l’extérieur ou dans les étages pour obtenir la meilleure qualité de signal. Attention, au-delà de 15 mètres de câble, le signal GSM est affaibli de manière significative.
 
 == Pour connecter la Box à une GTB
 
